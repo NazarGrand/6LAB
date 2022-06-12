@@ -1,0 +1,15 @@
+import { Router } from 'express';
+import FileController from '../Controllers/FileController.js';
+
+const controller = new FileController();
+const router = Router();
+
+router.get('/', controller.get);
+
+router.post('/', controller.post);
+
+router.put('/:id', controller.put);
+
+router.delete('/:id', controller.delete);
+
+export default router;
